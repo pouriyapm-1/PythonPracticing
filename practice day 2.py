@@ -122,3 +122,80 @@ print(x)
 # is (if both variables point to the same object, True), is not (Identify)
 # in, not in (uses to check if a value is in a sequence or not) (Membership)
 # & | ^ ~ << >> (Bitwise)
+
+# Lists
+firstlist = ["ali","reza","nima"]
+print(firstlist)
+
+print(len(firstlist))  # use len() to determine list length
+
+#List is a collection which is ordered and changeable. Allows duplicate members.
+# Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+# Set is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.
+# Dictionary is a collection which is ordered** and changeable. No duplicate members.
+
+# another way to create a list
+k = ("blue", "pink", "red")
+k = list(k)
+print(list(k))
+
+print(k[1:2]) # like the strings...
+if "blue" in k:
+  print("Yes, we have blue!")
+
+# change a item in list
+k[1] = "orange"
+print(k[1])
+# or we can change a range of items
+# k[1,3]  = ["blueberry", "banana"]
+
+# .insert( , ) to add a new item with specified place
+k.insert(0,"brown")
+print(k)
+
+# .append() to add new items at the end of the list.
+# To append elements from another list to the current list, use the .extend() method.
+
+list1 = ["99","88","77"]
+list1.append("66")
+print(list1)
+
+list2 = ["4", "5", "6"]
+list1.extend(list2)
+print(list1)
+# With The extend() method, you can add any iterable object (tuples, sets, dictionaries etc.).
+
+# .remove()
+list1.remove("6")
+print(list1)
+
+# .pop() removes the specified index (if u don't specify, removes the last item)
+list1.pop(0) 
+
+#del removes the specified index
+del list1[0]
+# del list1       # deletes the list completely
+
+list1.clear()     # empties the list
+
+# Loop through a list with for
+listt = [5, 7, 9, 11]
+for x in listt:
+  print(x)
+
+for i in range(len(listt)):
+  print(listt[i])  
+
+# with while
+z = 0
+while z < len(listt):
+  print(listt[z])
+  z += 1
+
+# list comprehension
+# newlist = [expression for item in iterable if condition == True]
+
+newlist = [x for x in range(10) if x < 5]
+print(newlist)
+
+newlist = [x.upper() for x in ...] # میشه expression رو دستکاری کرد
