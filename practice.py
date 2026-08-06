@@ -48,7 +48,6 @@ myfunc()
 
 myList = ["ali", "reza", "mmd"]
 myTuple = (1, 3 ,5)
-myDictionary = {"name" == "ali"; "age" == 26}
 
 # convert number types to each other
 x = 5
