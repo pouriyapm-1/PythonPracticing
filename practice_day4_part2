@@ -63,3 +63,29 @@ while x:
 
   # پسورد درست رو داخل برنامه تعیین کن
   #از کاربر پسورد بگیر و تا وقتی اشتباهه، دوباره درخواست کن. وقتی درست وارد کرد بگو آفرین
+password = "py12345"
+x = input("guess the password: ")
+while x:
+  if x == password:
+    print("Access granted!")
+    break
+  else:
+    x = input("wrong passwod, guess the password again: ")
+
+# برنامه‌ای بنویس که از کاربر یک عدد صحیح مثبت بگیره و با استفاده از حلقه وایل حساب کنه چند رقم داره.
+x = int(input("Enter a number: "))
+count = 0
+while x > 0:
+  count += 1
+  x = x // 10
+print("number of digits:", count)
+
+# برنامه‌ای بنویس که یک عدد صحیح مثبت از کاربر بگیره و با استفاده از ، عدد رو برعکس کنه.
+x = int(input("Enter a number: "))
+latest_digit = 0
+new_num = 0
+while x > 0:
+  latest_digit = x % 10
+  x = x // 10
+  new_num = new_num * 10 + latest_digit
+print(new_num)
