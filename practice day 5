@@ -138,6 +138,3 @@ for i in x:
       second_max = int(i)
 print(second_max)
    
-
-   
-
