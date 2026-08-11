@@ -214,13 +214,24 @@ print(myfunc1())
 #یعنی یک تابع رو می‌گیری و بدون تغییر دادن کد خودش، رفتارش رو با یک تابع دیگه تغییر/گسترش میدی.
 # Decorators let you add extra behavior to a function, without changing the function's code.
 # A decorator is a function that takes another function as input and returns a new function.
+# def changecase(func):
+#   def myinner():
+#     return func().upper()
+#   return myinner
+
+# @changecase
+# def myfunction():
+#   return "Hello Sally"
+
+# print(myfunction())
+
 def changecase(func):
   def myinner():
     return func().upper()
   return myinner
 
 @changecase
-def myfunction():
-  return "Hello Sally"
+def myfunc():
+  return "hello world! i'm here."
 
-print(myfunction())
+print(myfunc())
